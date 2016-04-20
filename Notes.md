@@ -25,4 +25,5 @@
      - num_range("x", 1:5): the variables named x01, x02, x03, x04 and x05,
      - one_of(x): every name that appears in x, which should be a character vector.
 - Pay attention here: When you refer to columns directly inside select(), you don't use quotes. If you use the helper functions, you do use quotes;
+- mutate(my_df, x = a + b, y = x + c);
       
