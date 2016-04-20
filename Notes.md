@@ -17,4 +17,12 @@
      - mutate(), used to add columns from existing data,
      - summarise(), which reduces each group to a single row by calculating aggregate measures;
 - in the select statement both column names and indexes could be used, ex. select(df, 1:4, -2), -2 mean that we don't want to display second column;
+- dplyr comes with a set of helper functions that can help you select groups of variables inside a select() call
+     - starts_with("X"): every name that starts with "X",
+     - ends_with("X"): every name that ends with "X",
+     - contains("X"): every name that contains "X",
+     - matches("X"): every name that matches "X", where "X" can be a regular expression,
+     - num_range("x", 1:5): the variables named x01, x02, x03, x04 and x05,
+     - one_of(x): every name that appears in x, which should be a character vector.
+- Pay attention here: When you refer to columns directly inside select(), you don't use quotes. If you use the helper functions, you do use quotes;
       
