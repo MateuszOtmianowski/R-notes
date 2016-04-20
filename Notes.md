@@ -16,5 +16,5 @@
      - arrange(), that reorders the rows according to single or multiple variables,
      - mutate(), used to add columns from existing data,
      - summarise(), which reduces each group to a single row by calculating aggregate measures;
-- 
+- in the select statement both column names and indexes could be used, ex. select(df, 1:4, -2), -2 mean that we don't want to display second column;
       
