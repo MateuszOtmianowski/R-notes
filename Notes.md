@@ -11,9 +11,9 @@
 ##Dplyr
 - data frames can be converted into table using tbl_df(), which makes it easier to work with, however table has the same properties as data frame so it can be manipulated the same way as data frame;
 - there are five functions in dplyr that are called verbs:
-          -select(), which returns a subset of the columns,
-          -filter(), that is able to return a subset of the rows,
-          -arrange(), that reorders the rows according to single or multiple variables,
-          -mutate(), used to add columns from existing data,
-          -summarise(), which reduces each group to a single row by calculating aggregate measures.
+-select(), which returns a subset of the columns,
+-filter(), that is able to return a subset of the rows,
+-arrange(), that reorders the rows according to single or multiple variables,
+-mutate(), used to add columns from existing data,
+-summarise(), which reduces each group to a single row by calculating aggregate measures.
       
