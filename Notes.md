@@ -26,4 +26,8 @@
      - one_of(x): every name that appears in x, which should be a character vector.
 - Pay attention here: When you refer to columns directly inside select(), you don't use quotes. If you use the helper functions, you do use quotes;
 - mutate(my_df, x = a + b, y = x + c);
+- filter allows to use x %in% c(a, b, c) syntax;
+- filter(df, a > 0 & b > 0) and filter(df, a > 0, b > 0) are equivalent;
+- use filter(df, !is.na(x)) to filter out NA's;
+- 
       
