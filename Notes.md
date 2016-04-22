@@ -16,7 +16,7 @@
      - arrange(), that reorders the rows according to single or multiple variables,
      - mutate(), used to add columns from existing data,
      - summarise(), which reduces each group to a single row by calculating aggregate measures;
-- in the select statement both column names and indexes could be used, ex. select(df, 1:4, -2), -2 mean that we don't want to display second column;
+- in the select statement both column names and indexes can be used, ex. select(df, 1:4, -2), -2 means that we don't want to display second column;
 - dplyr comes with a set of helper functions that can help you select groups of variables inside a select() call
      - starts_with("X"): every name that starts with "X",
      - ends_with("X"): every name that ends with "X",
