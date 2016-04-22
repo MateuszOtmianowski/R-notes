@@ -29,5 +29,14 @@
 - filter allows to use x %in% c(a, b, c) syntax;
 - filter(df, a > 0 & b > 0) and filter(df, a > 0, b > 0) are equivalent;
 - use filter(df, !is.na(x)) to filter out NA's;
-- 
+- summarise functions include
+     - min(x) - minimum value of vector x.
+     - max(x) - maximum value of vector x.
+     - mean(x) - mean value of vector x.
+     - median(x) - median value of vector x.
+     - quantile(x, p) - pth quantile of vector x.
+     - sd(x) - standard deviation of vector x.
+     - var(x) - variance of vector x.
+     - IQR(x) - Inter Quartile Range (IQR) of vector x.
+     - diff(range(x)) - total range of vector x.
       
