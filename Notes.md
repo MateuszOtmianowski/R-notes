@@ -39,4 +39,5 @@
      - var(x) - variance of vector x.
      - IQR(x) - Inter Quartile Range (IQR) of vector x.
      - diff(range(x)) - total range of vector x.
+- 
       
