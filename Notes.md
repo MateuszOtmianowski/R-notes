@@ -39,5 +39,9 @@
      - var(x) - variance of vector x.
      - IQR(x) - Inter Quartile Range (IQR) of vector x.
      - diff(range(x)) - total range of vector x.
-- 
+     - first(x) - The first element of vector x.
+     - last(x) - The last element of vector x.
+     - nth(x, n) - The nth element of vector x.
+     - n() - The number of rows in the data.frame or group of observations that summarise() describes.
+     - n_distinct(x) - The number of unique values in vector x.
       
