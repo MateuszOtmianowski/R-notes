@@ -7,7 +7,7 @@
 - paste(x,y,z) is used to concatenate strings together;
 - str() and summary() are used for fast data exploration, glimpse() is equivalent to str();
 - when changing values in the column the desired mapping could be done in a vector like x=c('a'='A', 'b'='B',...) values can be the assigned by df$column_name_1=x[df$column_name_2]
-- rank() takes a group of values and calculates the rank of each value within the group;
+- rank() takes a group of values and calculates the rank of each value within the group ex. rank(c(21, 22, 24, 23)) returns [1] 1 2 4 3;
 
 ##Dplyr
 - data frames can be converted into table using tbl_df(), which makes it easier to work with, however table has the same properties as data frame so it can be manipulated the same way as data frame;
