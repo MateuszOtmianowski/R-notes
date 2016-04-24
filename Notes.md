@@ -47,3 +47,16 @@
      - n() - The number of rows in the data.frame or group of observations that summarise() describes.
      - n_distinct(x) - The number of unique values in vector x.
       
+##googleVis
+- provides an interface between R and the Google Chart Tools;
+- gvisMotionChart() is used to create montion chart, in its simplest form it takes 3 arguments: data frame, subject to be analysed, and the time dimension data; 
+- additional arguments include 
+     - xvar: Here you place the column name of the variable to be plotted on the x-axis
+     - yvar: Here you place the column name of the variable to be plotted on the y-axis
+     - sizevar: Here you provide the column name that will make the bubbles change size.
+
+##Data.table
+- data.table() is used to create data tabe;
+- when selecting rows one do not need to use comma, e.x. DT[2:3] selects second and third row;
+- .N stores number of rows;
+- When you use .() in j, the result is always a data.table. But data.table also provides the option to return a vector while computing on just a single column and not wrapping it with .(), for convenience.
