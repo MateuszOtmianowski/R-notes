@@ -9,6 +9,12 @@
 - when changing values in the column the desired mapping could be done in a vector like x=c('a'='A', 'b'='B',...) values can be the assigned by df$column_name_1=x[df$column_name_2]
 - rank() takes a group of values and calculates the rank of each value within the group ex. rank(c(21, 22, 24, 23)) returns [1] 1 2 4 3;
 - prop.table(table(train$Survived)) <- gives table with proportions, you have to specify whether you want row-wise or column-wise proportions. This is done by setting the second argument of prop.table(), called margin, to 1 or 2, respectively;
+- to merge data frames merge() is used, you can use by=c("c1_name","c2_name",...) when column names are the same in both dfs or by.x=c(...) and by.y=c(...), different types of join can by achieved by using all.x and all.y parameter as follows
+     - inner join: merge(df1, df2);
+     - outer join: merge(x = df1, y = df2, by = "CustomerId", all = TRUE)
+     - left outer: merge(x = df1, y = df2, by = "CustomerId", all.x = TRUE)
+     - right outer: merge(x = df1, y = df2, by = "CustomerId", all.y = TRUE)
+     - cross join: merge(x = df1, y = df2, by = NULL)
 
 ##Dplyr
 - data frames can be converted into table using tbl_df(), which makes it easier to work with, however table has the same properties as data frame so it can be manipulated the same way as data frame;
