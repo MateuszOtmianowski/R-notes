@@ -16,7 +16,6 @@
      - right outer join: merge(x = df1, y = df2, by = "CustomerId", all.y = TRUE)
      - cross join: merge(x = df1, y = df2, by = NULL)
 - data frames can be converted into table using tbl_df(), which makes it easier to work with, however table has the same properties as data frame so it can be manipulated the same way as data frame;
-- 
 
 ##Dplyr
 - there are five functions in dplyr that are called verbs
