@@ -16,6 +16,7 @@
      - right outer join: merge(x = df1, y = df2, by = "CustomerId", all.y = TRUE)
      - cross join: merge(x = df1, y = df2, by = NULL)
 - data frames can be converted into table using tbl_df(), which makes it easier to work with, however table has the same properties as data frame so it can be manipulated the same way as data frame;
+- paste0("x", 1:5) generates x1,x2 up to x5;
 
 ##Dplyr
 - there are five functions in dplyr that are called verbs
@@ -70,5 +71,5 @@
 - when selecting rows one do not need to use comma, e.x. DT[2:3] selects second and third row;
 - .N stores number of rows;
 - When you use .() in j, the result is always a data.table. But data.table also provides the option to return a vector while computing on just a single column and not wrapping it with .(), for convenience;
-- .SD can be used in j to do an operations on each column except named in by, ex. DT[,(.SD, sum),by=x], to select fewer number of columns you can use .SDcols argument, after by ex. DT[,lapply(.SD, sum),,.SDcols=2:4];
+- .SD can be used in j to do an operations on each column except the column named in by, ex. DT[,(.SD, sum),by=x] (you can bypass that by explicitly naming by column in .SDcols), to select fewer number of columns you can use .SDcols argument, after by ex. DT[,lapply(.SD, sum),,.SDcols=2:4];
 - 
