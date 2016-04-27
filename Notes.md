@@ -62,7 +62,12 @@
      - sizevar: Here you provide the column name that will make the bubbles change size.
 
 ##Data.table
+- the basic syntax of working with data.table looks as follows DT[i,j,by=], where: 
+     - i is for rows selection; 
+     - j is for column selection and also works similiar to the ddplyr's mutate, so you can use functions like sum(), mean() etc. there; 
+     - in by you specify columns the output should be grouped by;
 - data.table() is used to create data tabe;
 - when selecting rows one do not need to use comma, e.x. DT[2:3] selects second and third row;
 - .N stores number of rows;
-- When you use .() in j, the result is always a data.table. But data.table also provides the option to return a vector while computing on just a single column and not wrapping it with .(), for convenience.
+- When you use .() in j, the result is always a data.table. But data.table also provides the option to return a vector while computing on just a single column and not wrapping it with .(), for convenience;
+- .SD can be used in j to do an operations on each column except named in by, ex. DT[,(.SD, sum),by=x];
