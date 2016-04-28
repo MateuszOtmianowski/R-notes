@@ -78,3 +78,4 @@
 - setwd() sets working directory;
 - dir() list files in the specified directory;
 - dir.create() creates last folder in the path, ex. dir.create("C:/library/test"), creates "test" in "library" folder;
+- dir.exists() checks if given path exists;
