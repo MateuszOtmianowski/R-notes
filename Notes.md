@@ -59,7 +59,7 @@
       
 ##googleVis
 - provides an interface between R and the Google Chart Tools;
-- gvisMotionChart() is used to create montion chart, in its simplest form it takes 3 arguments: data frame, subject to be analysed, and the time dimension data; 
+- gvisMotionChart() is used to create motion chart, in its simplest form it takes 3 arguments: data frame, subject to be analysed, and the time dimension data; 
 - additional arguments include: 
      - xvar: Here you place the column name of the variable to be plotted on the x-axis
      - yvar: Here you place the column name of the variable to be plotted on the y-axis
