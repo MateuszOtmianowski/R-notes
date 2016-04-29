@@ -72,6 +72,11 @@
 - .N stores number of rows;
 - When you use .() in j, the result is always a data.table. But data.table also provides the option to return a vector while computing on just a single column and not wrapping it with .(), for convenience;
 - .SD can be used in j to do an operations on each column except the column named in by, ex. DT[,(.SD, sum),by=x] (you can bypass that by explicitly naming by column in .SDcols), to select fewer number of columns you can use .SDcols argument, after by ex. DT[,lapply(.SD, sum),,.SDcols=2:4];
+- DT[[3]] chooses first column as a vector;
+- := is defined for use in j only, and there are two ways of using it. The first is the LHS := RHS form, where LHS is a character vector of column names and RHS is the corresponding value;
+- DT[,Total:=sum(B), by=A] creates column "Total" equal to the sum of column B grouped by A;
+- DT[,Total:=NULL,] deletes column "Total";
+- when using := in j do you don't need to assign the result to DT, i.e. the DT <- part is superfluous;
 
 #System operations
 - when specyfing path use "/" instead of "\";
