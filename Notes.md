@@ -17,6 +17,9 @@
      - cross join: merge(x = df1, y = df2, by = NULL)
 - data frames can be converted into table using tbl_df(), which makes it easier to work with, however table has the same properties as data frame so it can be manipulated the same way as data frame;
 - paste0("x", 1:5) generates x1,x2 up to x5;
+- sample(1:100, 3, replace=FALSE) return given number of integers (3) between 1:100, without replacement;
+- rnorm(4) returns 4 numbers from normal distribution, default mean=0 and sd=1, it can be specified by rnorm(4, mean=50, sd=10);
+- runif(1) return number from uniform distribution;
 
 ##Dplyr
 - there are five functions in dplyr that are called verbs
@@ -73,7 +76,7 @@
 - When you use .() in j, the result is always a data.table. But data.table also provides the option to return a vector while computing on just a single column and not wrapping it with .(), for convenience;
 - .SD can be used in j to do an operations on each column except the column named in by, ex. DT[,(.SD, sum),by=x] (you can bypass that by explicitly naming by column in .SDcols), to select fewer number of columns you can use .SDcols argument, after by ex. DT[,lapply(.SD, sum),,.SDcols=2:4];
 - DT[[3]] chooses first column as a vector;
-- := is defined for use in j only, and there are two ways of using it. The first is the LHS := RHS form, where LHS is a character vector of column names and RHS is the corresponding value;
+- := is defined for use in j only, and there are two ways of using it. The first is the LHS := RHS form, where LHS is a character vector of column names and RHS is the corresponding value, the second one is functional form ':=' that could be used as follows DT[,':='(B=B+1, C=A+B, D=2];
 - DT[,Total:=sum(B), by=A] creates column "Total" equal to the sum of column B grouped by A;
 - DT[,Total:=NULL,] deletes column "Total";
 - when using := in j do you don't need to assign the result to DT, i.e. the DT <- part is superfluous;
