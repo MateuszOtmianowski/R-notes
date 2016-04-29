@@ -83,6 +83,7 @@
 - set(x, i=NULL, j, value) is loopable function for changing values in a data.table, ex. for(j in 2:4){ set(DT, sample(1:10,3, replace=FALSE), j, NA)}
 - setnames(x,old,new) is used to changing column names in a data.table;
 - setcolorder(x, neworder) changes column order;
+- DT[,A=="a"] returns vector, but DT[,.(A=="a")] returns data.table;
 
 #System operations
 - when specyfing path use "/" instead of "\";
