@@ -85,6 +85,7 @@
 - setcolorder(x, neworder) changes column order;
 - DT[,A=="a"] returns vector, but DT[,.(A=="a")] returns data.table;
 - you can manually set a key via setkey(DT,A,B). setkey() will then sort the data by the columns that you specify, and change the table by reference. Having set a key will allow you to use it as a super-charged rowname when doing selections for example. Arguments like mult and nomatch then help you to only select particular parts of groups;
+-by = .EACHI allows you to run j for each group in which each item in i joins too;
 
 #System operations
 - when specyfing path use "/" instead of "\";
