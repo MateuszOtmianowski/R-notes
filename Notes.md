@@ -84,6 +84,7 @@
 - setnames(x,old,new) is used to changing column names in a data.table;
 - setcolorder(x, neworder) changes column order;
 - DT[,A=="a"] returns vector, but DT[,.(A=="a")] returns data.table;
+- you can manually set a key via setkey(DT,A,B). setkey() will then sort the data by the columns that you specify, and change the table by reference. Having set a key will allow you to use it as a super-charged rowname when doing selections for example. Arguments like mult and nomatch then help you to only select particular parts of groups;
 
 #System operations
 - when specyfing path use "/" instead of "\";
