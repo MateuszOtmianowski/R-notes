@@ -80,6 +80,9 @@
 - DT[,Total:=sum(B), by=A] creates column "Total" equal to the sum of column B grouped by A;
 - DT[,Total:=NULL,] deletes column "Total";
 - when using := in j do you don't need to assign the result to DT, i.e. the DT <- part is superfluous;
+- set(x, i=NULL, j, value) is loopable function for changing values in a data.table, ex. for(j in 2:4){ set(DT, sample(1:10,3, replace=FALSE), j, NA)}
+- setnames(x,old,new) is used to changing column names in a data.table;
+- setcolorder(x, neworder) changes column order;
 
 #System operations
 - when specyfing path use "/" instead of "\";
