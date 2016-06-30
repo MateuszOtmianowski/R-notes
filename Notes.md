@@ -20,6 +20,7 @@
 - sample(1:100, 3, replace=FALSE) return given number of integers (3) between 1:100, without replacement;
 - rnorm(4) returns 4 numbers from normal distribution, default mean=0 and sd=1, it can be specified by rnorm(4, mean=50, sd=10);
 - runif(1) return number from uniform distribution;
+- seq_along() is useful for creating interations for the loop, it handles empty object better (ex. column in data frame);
 
 ##Dplyr
 - there are five functions in dplyr that are called verbs
