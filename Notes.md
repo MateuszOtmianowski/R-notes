@@ -95,3 +95,11 @@
 - dir() list files in the specified directory;
 - dir.create() creates last folder in the path, ex. dir.create("C:/library/test"), creates "test" in "library" folder;
 - dir.exists() checks if given path exists;
+
+#Purrr Package
+- all the map functions in purrr take a vector, .x, as the first argument, then return .f applied to each element of .x. The type of object that is returned is determined by function suffix (the part after _):
+          - map() returns a list or data frame
+          - map_lgl() returns a logical vector
+          - map_int() returns a integer vector
+          - map_dbl() returns a double vector
+          - map_chr() returns a character vector
