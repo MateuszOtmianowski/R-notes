@@ -21,6 +21,7 @@
 - rnorm(4) returns 4 numbers from normal distribution, default mean=0 and sd=1, it can be specified by rnorm(4, mean=50, sd=10);
 - runif(1) return number from uniform distribution;
 - seq_along() is useful for creating interations for the loop, it handles empty object better (ex. column in data frame);
+- to create empty data frame use df=data.frame("column_name_1"=numeric(),"column_name_1"=character()), then to add row: rbind(df, data.frame("a"=c(1,2),"b"=c("ala","kot")));
 
 ##Dplyr
 - there are five functions in dplyr that are called verbs
