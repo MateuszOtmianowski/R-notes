@@ -22,6 +22,7 @@
 - runif(1) return number from uniform distribution;
 - seq_along() is useful for creating interations for the loop, it handles empty object better (ex. column in data frame);
 - to create empty data frame use df=data.frame("column_name_1"=numeric(),"column_name_1"=character()), then to add row: rbind(df, data.frame("a"=c(1,2),"b"=c("ala","kot")));
+- when subsetting a list, list[1] returns first element as a list, however list[[1]] returns first element; 
 
 ##Dplyr
 - there are five functions in dplyr that are called verbs
@@ -103,3 +104,11 @@
           - map_int() returns a integer vector
           - map_dbl() returns a double vector
           - map_chr() returns a character vector
+- The map functions use the ... ("dot dot dot") argument to pass along additional arguments to .f each time it’s called. For example, we can pass a trim argument to the mean() function: map_dbl(df, mean, trim = 0.5). Multiple arguments can be passed along using commas to separate them. For example, we can also pass the na.rm argument to mean(): map_dbl(df, mean, trim = 0.5, na.rm = TRUE);
+- in purr package you can use map functions with anonymous functions like map_dbl(cyl, function(df) mean(df$disp)), or in shorter version: map_dbl(cyl, ~ mean(.$disp)), i.e. we replace the function definition (function(df)) with the '~', then when we need to refer to the element of cyl the function operates on (in this case df), we use a '.';
+- there are also some useful shortcuts that come in handy when you want to subset each element of the .x argument. If the .f argument to a map function is set equal to a string, let's say "name", then purrr extracts the "name" element from every element of .x;
+- another useful shortcut for subetting is to pass a numeric vector as the .f argument. This works just like passing a string but subsets by index rather than name;
+- purrr also includes a pipe operator: %>%. The pipe operator is another shortcut that saves typing, but also increases readability. The explanation of the pipe operator is quite simple: x %>% f(y) is another way of writing f(x, y). That is, the left hand side of the pipe, x, becomes the first argument to the function, f(), on the right hand side of the pipe;
+- safely() is an adverb; it takes a verb and modifies it. That is, it takes a function as an argument and it returns a function as its output. The function that is returned is modified so it never throws an error (and never stops the rest of your computation!). Instead, it always returns a list with two elements:
+          1. result is the original result. If there was an error, this will be NULL.
+          2. error is an error object. If the operation was successful this will be NULL.
