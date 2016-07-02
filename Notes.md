@@ -110,5 +110,6 @@
 - another useful shortcut for subetting is to pass a numeric vector as the .f argument. This works just like passing a string but subsets by index rather than name;
 - purrr also includes a pipe operator: %>%. The pipe operator is another shortcut that saves typing, but also increases readability. The explanation of the pipe operator is quite simple: x %>% f(y) is another way of writing f(x, y). That is, the left hand side of the pipe, x, becomes the first argument to the function, f(), on the right hand side of the pipe;
 - safely() is an adverb; it takes a verb and modifies it. That is, it takes a function as an argument and it returns a function as its output. The function that is returned is modified so it never throws an error (and never stops the rest of your computation!). Instead, it always returns a list with two elements
-          - result is the original result. If there was an error, this will be NULL.
-          - error is an error object. If the operation was successful this will be NULL.
+          - result is the original result. If there was an error, this will be NULL;
+          - error is an error object. If the operation was successful this will be NULL;
+
