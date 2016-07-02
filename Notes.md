@@ -112,4 +112,5 @@
 - safely() is an adverb; it takes a verb and modifies it. That is, it takes a function as an argument and it returns a function as its output. The function that is returned is modified so it never throws an error (and never stops the rest of your computation!). Instead, it always returns a list with two elements
           - result is the original result. If there was an error, this will be NULL;
           - error is an error object. If the operation was successful this will be NULL;
-
+- safely can be used to create safe functions ex. safe_function=safe(function);
+- purrr provides a function transpose() that reshapes a list so the inner-most level becomes the outer-most level. In otherwords, it turns a list-of-lists "inside-out";
