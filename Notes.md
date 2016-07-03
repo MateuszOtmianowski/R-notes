@@ -116,4 +116,4 @@
 - purrr provides a function transpose() that reshapes a list so the inner-most level becomes the outer-most level. In otherwords, it turns a list-of-lists "inside-out";
 - using map2 function you can run function with 2 alternative variables values ex. map2(n, mu, rnorm), both n and mu are lists of variables values, in pmap is used for more than 2 variables values, but they must be put into a list like pmap(list(n, mu), rnorm);
 - invoke_map() is used to iterate over list of functions, the first argument is a list of functions, the second one specifies the arguments to the functions. In more complicated cases, the functions may take different arguments, or we may want to pass different values to each function. In this case, we need to supply invoke_map() with a list, where each element specifies the arguments to the corresponding function;
-- 
+- walk() operates just like map() except it's designed for functions that don't return anything. You use walk() for functions with side effects like printing, plotting or saving;
