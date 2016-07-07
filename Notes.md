@@ -124,3 +124,5 @@
 - spread(long_df, my_key, my_val) is the opposite of gather;
 - separate(df, col=col_to_sep, into=c(), (sep="")) function allows you to separate one column into multiple columns. Unless you tell it otherwise, it will attempt to separate on any character that is not a letter or number. You can also specify a specific separator using the sep argument;
 - the opposite to separate is unite(df, new_col, col_1, col_2, sep);
+
+##Stringr
