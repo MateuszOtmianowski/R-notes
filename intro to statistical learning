@@ -1,0 +1,16 @@
+#Intro to statistical learning command notes
+
+##Linear regression
+- lm(data, y~x1+x2) calculates least squares regression line, instead of naming each predictor ypou can use '.' to select all, then exclude with '-' unwanted ones;
+- to use polynomials in the regression use poly(x, level of polynomial), ex. lm(y~poly(x,3));
+- to introduce interaction between predictors use x1*x2 to include both x1, x2, and x1x2 or x1:x2 for just x1x2;
+- for prediction use:
+predict(lm_f, data.frame(horsepower=c(98)), interval='prediction') <- returns prediction intervals
+predict(lm_f, data.frame(horsepower=c(98)), interval='confidence') <- returns confidence intervals
+- to plot summary plots for linear regression function use:
+par(mfrow=c(2,2)
+plot(lm)
+- for confidence intervals use: confint(lm)
+- abline(lm) ads linear regression line to the plot()
+-
+
