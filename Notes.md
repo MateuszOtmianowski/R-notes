@@ -26,6 +26,7 @@
 - lubridate package is useful for working with dates, you can convert string with date using y,m,d,h,m,s set by for example ymd_hms("date"), or separately mdy("date");
 - You may have noticed that there are two ways to get a column -- you can use whiteHouse["Salary"], or whiteHouse[,"Salary"]. Both of these will get the column, but they will do it in different ways. It's critical to know exactly what's happening, or you could end up with code that doesn't work properly. whiteHouse["Salary"] will return a data frame object. It will take just one column of the existing data frame, and create a new data frame with only that column. You could even type whiteHouse["Salary"]["Salary"] (or add ["Salary"] as many times as you want), and keep getting the same data frame, with just one column. whiteHouse[,"Salary"] will return a vector, with only the data in the Salary column. This is because using matrix indexing on a dataframe (two numbers separated by a comma) will always return a vector;
 - lapply(logs, function(x){x$timestamp}) == lapply(logs, '[[',"timestamp");
+- & and && indicate logical AND and | and || indicate logical OR. The shorter form performs elementwise comparisons in much the same way as arithmetic operators. The longer form evaluates left to right examining only the first element of each vector. Evaluation proceeds only until the result is determined. The longer form is appropriate for programming control-flow and typically preferred in if clauses;
 
 ##Dplyr
 - there are five functions in dplyr that are called verbs
